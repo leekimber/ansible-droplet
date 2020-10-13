@@ -95,24 +95,27 @@ ansible-droplet create my_droplet SPEC_NAME
 For now, only 3 specs are supported<sup>[2](#f2)</sup>:
 * **Micro**
   * size: "512mb"
-  * region: "fra1"
+  * region: "lon1" or "fra1"
   * image: "ubuntu-16-04-x64"
   * swap: "4GiB"
 * **Mini**
   * size: "1gb"
-  * region: "fra1"
+  * region: "lon1" or "fra1"
   * image: "ubuntu-16-04-x64"
   * swap: "4GiB"
 * **Power**
   * size: "4gb"
-  * region: "fra1"
+  * region: "lon1" or "fra1"
   * image: "ubuntu-16-04-x64"
   * swap: "4GiB"
 
 The list of specification are stored on the repository: [Droplet Specs](https://github.com/FlorianKempenich/ansible-droplet/tree/master/ansible_droplet/ansible/droplet_specs)
 
+# Possible sizes are:
+[u's-1vcpu-1gb', u'512mb', u's-1vcpu-2gb', u'1gb', u's-3vcpu-1gb', u's-2vcpu-2gb', u's-1vcpu-3gb', u's-2vcpu-4gb', u'2gb', u's-4vcpu-8gb', u'm-1vcpu-8gb', u'c-2', u'4gb', u'c2-2vcpu-4gb', u'g-2vcpu-8gb', u'gd-2vcpu-8gb', u'm-16gb', u's-8vcpu-16gb', u's-6vcpu-16gb', u'c-4', u'8gb', u'c2-4vpcu-8gb', u'm-2vcpu-16gb', u'm3-2vcpu-16gb', u'g-4vcpu-16gb', u'gd-4vcpu-16gb', u'm6-2vcpu-16gb', u'm-32gb', u's-8vcpu-32gb', u'c-8', u'16gb', u'c2-8vpcu-16gb', u'm-4vcpu-32gb', u'm3-4vcpu-32gb', u'g-8vcpu-32gb', u's-12vcpu-48gb', u'gd-8vcpu-32gb', u'm6-4vcpu-32gb', u'm-64gb', u's-16vcpu-64gb', u'c-16', u'32gb', u'c2-16vcpu-32gb', u'm-8vcpu-64gb', u'm3-8vcpu-64gb', u's-20vcpu-96gb', u'48gb', u'm6-8vcpu-64gb', u'm-128gb', u's-24vcpu-128gb', u'64gb', u'c2-32vpcu-64gb', u'm-16vcpu-128gb', u'm3-16vcpu-128gb', u's-32vcpu-192gb', u'm-24vcpu-192gb', u'm-224gb', u'm6-16vcpu-128gb', u'm3-24vcpu-192gb', u'm6-24vcpu-192gb', u'm3-32vcpu-256gb', u'm6-32vcpu-256gb']
 
-
+# Possible regions are:
+[u'ams2', u'ams3', u'blr1', u'fra1', u'lon1', u'nyc1', u'nyc2', u'nyc3', u'sfo1', u'sfo2', u'sfo3', u'sgp1', u'tor1']
 
 ### Ansible Droplet Inventory
 It is possible to access the Droplet from any other ansible playbook via its **name**:  
